@@ -1,0 +1,31 @@
+<div class="p-2 movie-div mx-1 my-3 mediaCard">
+  <figure class="w-100">
+    <img class="w-100" [src]="input.poster_path" />
+  </figure>
+  <div class="details p-4">
+    <h4 class="card-title text-light text-truncate mb-4">{{ input.title }}</h4>
+    <div class="d-flex justify-content-between mb-2">
+      <span class="text-truncate text-warning">
+        rate: {{ input.vote_average }}
+      </span>
+    </div>
+    <span class="text-truncate text-warning">
+      Release date : {{ input.release_date | date: "mediumDate" }}
+    </span>
+    <span class="d-block pt-3 text-center"
+      ><i
+        type="button"
+        class="fa-solid fa-star fs-5"
+        (click)="addToFav(input, input.id)"
+        [ngClass]="check ? 'text-warning' : 'text-white'"
+      ></i
+    ></span>
+    <button
+      type="button"
+      class="btn btn-outline-warning mt-4 mx-auto d-block w-100"
+      [routerLink]="['/home/Multi-media/movie/details/', input.id]"
+    >
+      Movie Details
+    </button>
+  </div>
+</div>

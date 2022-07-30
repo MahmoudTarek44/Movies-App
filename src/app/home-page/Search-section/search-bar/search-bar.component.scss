@@ -1,0 +1,15 @@
+.search_bar{
+    width: 100%;
+    height: 60vh;
+    background: rgba(0, 0, 0, 0.603) url('../../../../assets/images/home_cover.jpg');
+    background-blend-mode: overlay;
+    padding-top: 100px;
+    input{
+        width: 70%;
+        margin: auto;
+        display: block;
+        padding: 17px;
+        border: black;
+        border-radius: 5px;
+    }
+}

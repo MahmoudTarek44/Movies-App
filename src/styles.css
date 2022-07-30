@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Fjalla+One&display=swap");
+.spin-loader {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: black;
+  z-index: 100;
+  opacity: 0.5;
+}
+body {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#0f0c29),
+    color-stop(#302b63),
+    to(#24243e)
+  );
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* font-family: "Courgette", cursive; */
+  font-family: "Fjalla One", sans-serif;
+
+}

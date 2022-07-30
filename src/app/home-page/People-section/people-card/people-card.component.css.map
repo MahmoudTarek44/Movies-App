@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACA,AAAA,UAAU,CAAC;EACT,MAAM,EAAE,KAAK;CACd;;AAED,AAAA,sBAAsB,CAAC;EACrB,MAAM,EAAE,KAAK;CACd",
+    "sources": [
+        "people-card.component.scss"
+    ],
+    "names": [],
+    "file": "people-card.component.css"
+}

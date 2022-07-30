@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AACE,aADW,CACX,GAAG,CAAC;EACF,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,GAAG;EACX,OAAO,EAAE,KAAK;EACd,MAAM,EAAE,MAAM;EACd,aAAa,EAAE,IAAI;EACnB,UAAU,EAAE,kBAAkB;CAC/B",
+    "sources": [
+        "media-news.component.scss"
+    ],
+    "names": [],
+    "file": "media-news.component.css"
+}

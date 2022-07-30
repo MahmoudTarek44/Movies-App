@@ -1,0 +1,16 @@
+.cover_master {
+  width: 100%;
+
+  background: rgba(11, 10, 25, 0.118) url("../../../assets/images/cover2.jpg")
+    no-repeat 100% 100% / cover;
+  background-blend-mode: multiply;
+  box-sizing: border-box;
+}
+
+.formstyle {
+  background-color: rgba(255, 255, 255, 0.886);
+  border-radius: 20px;
+}
+button:hover {
+  background-color: gray;
+}

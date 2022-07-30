@@ -1,0 +1,16 @@
+<div class="row container mx-auto backGround px-0">
+  <app-people-card
+    class="col-md-3 col-sm-3"
+    *ngFor="let popular of trendingpeople"
+    [input]="popular"
+  >
+  </app-people-card>
+</div>
+<div
+  *ngIf="_loader.Loading | async"
+  class="d-flex justify-content-center spin-loader"
+>
+  <div class="spinner-grow text-primary position-fixed top-50" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>

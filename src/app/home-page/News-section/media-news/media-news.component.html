@@ -1,0 +1,113 @@
+<div class="container text-center">
+  <div class="container h-75 row">
+    <h1 class="text-warning my-4">Upcoming movies ..</h1>
+    <div
+      id="carouselExampleFade"
+      class="carousel slide carousel-fade w-md-75 mx-auto col-9"
+      data-bs-ride="carousel"
+    >
+      <div *ngIf="upcomingMovies" class="carousel-inner rounded-pill">
+        <div
+          *ngFor="let movie of upcomingMovies; first as firstSlide"
+          [ngClass]="{ active: firstSlide }"
+          class="carousel-item py-2"
+          data-bs-interval="3000"
+        >
+          <figure class="poster-img">
+            <img
+              [src]="movie.backdrop_path"
+              style="opacity: 0.5"
+              class="d-block w-100 mx-auto"
+              alt="background"
+            />
+          </figure>
+          <div class="carousel-caption">
+            <figure class="media-poster pt-4 d-none d-md-block">
+              <img [src]="movie.poster_path" alt="poster" />
+            </figure>
+            <h5>{{ movie.title }}</h5>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleFade"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleFade"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="container h-75 row">
+    <h1 class="text-warning mb-5">Airing now TV series ..</h1>
+    <div
+      id="carouselExampleFade2"
+      class="carousel slide carousel-fade mx-auto col-9"
+      data-bs-ride="carousel"
+    >
+      <div *ngIf="upcomingTV" class="carousel-inner rounded-pill">
+        <div
+          *ngFor="let tv of upcomingTV; first as firstSlide"
+          [class.active]="firstSlide"
+          class="carousel-item py-2"
+          data-bs-interval="5000"
+        >
+          <figure class="poster-img">
+            <img
+              [src]="tv.backdrop_path"
+              style="opacity: 0.5"
+              class="d-block w-100 mx-auto"
+              alt="..."
+            />
+          </figure>
+          <div class="carousel-caption">
+            <figure class="media-poster rounded-4 pt-4 d-none d-md-block">
+              <img [src]="tv.poster_path" alt="poster" />
+            </figure>
+            <h5>{{ tv.name }}</h5>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleFade2"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleFade2"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</div>
+<div
+  *ngIf="_loader.Loading | async"
+  class="d-flex justify-content-center spin-loader"
+>
+  <div class="spinner-grow text-primary position-fixed top-50" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>

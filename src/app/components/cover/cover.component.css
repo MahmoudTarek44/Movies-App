@@ -1,0 +1,92 @@
+.cover_master {
+  width: 100%;
+  height: 100vh;
+  background: rgba(11, 10, 25, 0.118) url("../../../assets/images/cover2.jpg") no-repeat 100% 100%/cover;
+  background-blend-mode: multiply;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 40px;
+}
+
+.cover_master h1 {
+  color: orange;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.cover_master ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 20%;
+  height: 80px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cover_master ul li {
+  list-style: none;
+}
+
+.cover_master ul li a {
+  text-decoration: none;
+  color: white;
+  margin: 0 10px;
+  padding: 15px;
+  background-color: orange;
+  border-radius: 5px;
+  width: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cover_master ul li a:hover {
+  background-color: white;
+  color: black;
+}
+
+figure {
+  width: 70px;
+  height: 70px;
+  position: relative;
+}
+
+figure::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.2;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  border-radius: 50%;
+}
+
+figure:hover::after {
+  opacity: 0;
+}
+
+.logoContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 100px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=cover.component.css.map */

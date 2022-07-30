@@ -1,0 +1,10 @@
+.media-poster img {
+  width: 40%;
+  height: 60%;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 10px white;
+          box-shadow: 5px 5px 10px white;
+}
+/*# sourceMappingURL=media-news.component.css.map */

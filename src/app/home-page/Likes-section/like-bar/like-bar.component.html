@@ -1,0 +1,17 @@
+<li
+  type="button"
+  (click)="showDetails()"
+  class="p-1 love-bar px-0 col-11 mb-3 list-style-none row justify-content-between align-items-center rounded-4"
+>
+  <figure class="col-4 rounded-4">
+    <img [src]="input.poster_path" alt="poster" class="w-100" />
+  </figure>
+  <div class="col-8 px-2 row">
+    <p class="col-8">{{ input.title }}</p>
+    <i
+      (click)="removeFromList(input.id)"
+      type="button"
+      class="fa-solid fa-xmark col-1 text-danger fs-5"
+    ></i>
+  </div>
+</li>

@@ -1,0 +1,58 @@
+<app-nav-bar></app-nav-bar>
+<app-likes-sidebar></app-likes-sidebar>
+
+<div class="detailsCard row text-warning p-4 fs-5" *ngIf="mediaDetails">
+  <div class="col-4">
+    <figure>
+      <img
+        class="w-100 poster"
+        [src]="
+          mediaDetails.poster_path
+            ? mediaDetails.poster_path
+            : mediaDetails.profile_path
+        "
+      />
+    </figure>
+  </div>
+  <div class="col-8 mt-5">
+    <h3 class="card-title text-light">
+      {{ mediaDetails.title ? mediaDetails.title : mediaDetails.name }}
+    </h3>
+    <div class="dates py-2">
+      <div>
+        <span class="pe-2">{{
+          mediaDetails.poster_path ? "Release date :" : "Birth Day :"
+        }}</span>
+        <span *ngIf="mediaDetails.birthday">
+          {{ mediaDetails.birthday | date: "mediumDate" }}
+        </span>
+        {{
+          mediaDetails.release_date
+            ? mediaDetails.release_date
+            : mediaDetails.first_air_date
+        }}
+      </div>
+    </div>
+    <p class="card-text text-light lh-2">
+      {{
+        mediaDetails.overview ? mediaDetails.overview : mediaDetails.biography
+      }}
+    </p>
+    <h6 *ngIf="mediaDetails.poster_path" class="card-subtitle mb-2">
+      Rate :
+      {{ mediaDetails.vote_average }}
+    </h6>
+    <button *ngIf="mediaDetails.poster_path" class="btn btn-outline-warning w-25 mt-3">
+      Watch this
+    </button>
+  </div>
+</div>
+<div
+  *ngIf="_loader.Loading | async"
+  class="d-flex justify-content-center spin-loader"
+  git
+>
+  <div class="spinner-grow text-primary position-fixed top-50" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>

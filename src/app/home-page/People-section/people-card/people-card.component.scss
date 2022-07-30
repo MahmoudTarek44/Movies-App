@@ -1,0 +1,12 @@
+
+
+.people-card-container:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 15px black;
+
+}
+.people-card-container{
+  transition: all .1s ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.685);
+  border-radius: 3px;
+}

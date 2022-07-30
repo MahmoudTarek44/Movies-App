@@ -1,0 +1,16 @@
+<div class="row container mx-auto justify-content-between backGround px-0">
+  <app-tv-media-card
+    class="col-md-3"
+    *ngFor="let oneTv of trendingtv"
+    [input]="oneTv"
+  >
+  </app-tv-media-card>
+</div>
+<div
+  *ngIf="_loader.Loading | async"
+  class="d-flex justify-content-center spin-loader"
+>
+  <div class="spinner-grow text-primary position-fixed top-50" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>

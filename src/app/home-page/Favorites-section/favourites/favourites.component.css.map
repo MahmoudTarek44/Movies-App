@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "favourites.component.scss"
+    ],
+    "names": [],
+    "file": "favourites.component.css"
+}

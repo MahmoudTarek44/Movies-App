@@ -1,0 +1,82 @@
+<div class="cover_master p-5">
+  <form
+    [formGroup]="userSignInForm"
+    (ngSubmit)="signIn(login)"
+    #login="ngForm"
+    class="formstyle mx-auto p-5 mb-5 w-50"
+  >
+    <div class="mb-5">
+      <label for="name" class="form-label">Email address</label>
+      <input
+        formControlName="email"
+        type="email"
+        class="form-control py-2"
+        aria-describedby="email-info"
+        placeholder=""
+      />
+      <div
+        *ngIf="
+          !userSignInForm.controls['email'].valid &&
+          userSignInForm.controls['email'].touched
+        "
+      >
+        <p
+          class="bg-warning text-white col-4 rounded-1 px-3 py-2 mt-2"
+          *ngIf="userSignInForm.controls['email'].errors?.['required']"
+        >
+          This field is required !
+        </p>
+        <p
+          class="bg-warning text-white col-5 rounded-1 px-3 py-2 mt-2"
+          *ngIf="userSignInForm.controls['email'].errors?.['pattern']"
+        >
+          This is not a valid e-mail address !
+        </p>
+      </div>
+    </div>
+    <div class="mb-5">
+      <label for="password" class="form-label">Password</label>
+      <input
+        formControlName="password"
+        name="password"
+        type="password"
+        class="form-control py-2"
+        placeholder=""
+      />
+      <div
+        *ngIf="
+          !userSignInForm.controls['password'].valid &&
+          userSignInForm.controls['password'].touched
+        "
+      >
+        <p
+          class="bg-warning text-white col-4 rounded-1 px-3 py-2 mt-2"
+          *ngIf="userSignInForm.controls['password'].errors?.['required']"
+        >
+          This field is required !
+        </p>
+        <p
+          class="bg-warning text-white col-11 rounded-1 px-3 py-2 mt-2"
+          *ngIf="userSignInForm.controls['password'].errors?.['pattern']"
+        >
+          Password must contain at least one Uppercase, number & special char
+          [@,%,$,#,*] !
+        </p>
+      </div>
+    </div>
+    <button
+      onclick=""
+      [disabled]="!userSignInForm.valid"
+      type="submit"
+      class="btn btn-warning border-1 border-light d-block w-25 mx-auto mt-5"
+    >
+      Sign In
+    </button>
+  </form>
+  <div class="mx-auto container col-4 text-center py-4">
+    <p class="text-light">
+      Don't have account?
+      <a class="text-decoration-none" routerLink="/auth/signup">Sign Up</a>
+    </p>
+  </div>
+</div>

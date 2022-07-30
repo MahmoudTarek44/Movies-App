@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "trending-movies.component.scss"
+    ],
+    "names": [],
+    "file": "trending-movies.component.css"
+}

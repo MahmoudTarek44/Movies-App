@@ -1,0 +1,110 @@
+<nav
+  class="navbar navbar-expand-lg align-content-center fixed-top"
+  style="background-color: rgba(14, 13, 13, 0.473); height: 70px"
+>
+  <div class="container logoContainer">
+    <figure type="button" routerLink="/home">
+      <img src="../../../assets/images/logo.svg" />
+      <img class="textImg" src="../../../assets/images/text1.png" />
+    </figure>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul
+        class="navbar-nav col-12 ms-lg-auto mb-2 justify-content-between w-50 align-items-sm-start align-items-lg-center"
+      >
+        <li class="nav-item my-1 mx-3 col-1">
+          <a
+            routerLink="/home"
+            class="nav-link active text-warning"
+            aria-current="page"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item dropdown my-1 mx-2 col-2">
+          <a
+            class="nav-link dropdown-toggle text-warning"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Categories
+          </a>
+          <ul class="dropdown-menu col-2" aria-labelledby="navbarDropdown">
+            <li>
+              <a routerLink="/home/trendMovies" class="dropdown-item">Movies</a>
+            </li>
+            <li>
+              <a routerLink="/home/trendTv" class="dropdown-item">TV Series</a>
+            </li>
+            <li>
+              <a routerLink="/home/trendPeople" class="dropdown-item">People</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item my-1 col-3 ms-4">
+          <a
+            routerLink="/home/favourites"
+            class="nav-link text-warning"
+            role="button"
+            >Favourites <i class="fa-solid fa-star text-warning"></i
+          ></a>
+        </li>
+        <li class="nav-item my-1 col-2">
+          <a
+            class="nav-link text-warning"
+            data-bs-toggle="offcanvas"
+            href="#CanvasSidebar"
+            role="button"
+            aria-controls="offcanvasExample"
+          >
+            Likes <i class="fa-solid fa-heart text-danger"></i>
+          </a>
+        </li>
+        <li class="nav-item dropdown my-1 col-2">
+          <a
+            class="nav-link dropdown-toggle text-warning"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Language
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li>
+              <a type="button" (click)="changeAr()" class="dropdown-item"
+                >Arabic</a
+              >
+            </li>
+            <li>
+              <a type="button" (click)="changeEn()" class="dropdown-item"
+                >English</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item my-1 ms-5 col-2">
+          <a
+            class="nav-link btn btn-outline-warning text-light"
+            (click)="LogOut()"
+            type="button"
+            >Log Out</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

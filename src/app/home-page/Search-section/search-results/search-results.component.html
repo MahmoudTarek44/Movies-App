@@ -1,0 +1,50 @@
+<app-nav-bar></app-nav-bar>
+<app-likes-sidebar></app-likes-sidebar>
+<div
+  class="container mt-5 pt-5 text-center mx-auto justify-content-center row w-75 dataContainer"
+  *ngIf="searchResult.length > 0 && !(_loader.Loading | async)"
+>
+  <h3 class="p-4 bg-light w-75 rounded-pill mx-auto">
+    These are the results for <span> "{{ searchQurey }}</span
+    >"
+  </h3>
+  <div
+    type="button"
+    *ngFor="let search of searchResult"
+    class="search-card row w-75 mt-5 d-flex justify-content-around align-items-center"
+    [ngStyle]="{ 'background-image': 'url(' + search.backdrop_path + ')' }"
+    (click)="mediaDetails(search.media_type, search.id)"
+  >
+    <figure *ngIf="search.backdrop_path" class="col-4 px-0">
+      <img [src]="search.poster_path" alt="poster" />
+    </figure>
+    <div class="col-8 search-details px-0 text-light text-start">
+      <h3 class="mb-3">{{ search.title ? search.title : search.name }}</h3>
+      <p>{{ search.overview.slice(0, 150) + " ...." }}</p>
+    </div>
+  </div>
+</div>
+
+<div
+  *ngIf="searchResult.length == 0 && !(_loader.Loading | async)"
+  class="container text-center mt-5 pt-5"
+>
+  <h3 class="bg-light p-4 rounded-3 w-50 mx-auto">
+    No results matches, Please try again..
+  </h3>
+  <figure class="py-5 w-75 mx-auto">
+    <img
+      src="../../../../assets/images/undraw_house_searching_re_stk8.svg"
+      alt=""
+    />
+  </figure>
+</div>
+
+<div
+  *ngIf="_loader.Loading | async"
+  class="d-flex justify-content-center spin-loader"
+>
+  <div class="spinner-grow text-primary position-fixed top-50" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>

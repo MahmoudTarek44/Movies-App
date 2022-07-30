@@ -1,0 +1,22 @@
+<form
+  #search="ngForm"
+  (ngSubmit)="SearchForMedia(search)"
+  class="search_bar row align-items-center"
+>
+  <div class="col-auto w-75 me-0">
+    <input
+      #search="ngModel"
+      name="search"
+      ngModel
+      search
+      class="form-control me-0"
+      type="text"
+      placeholder="Search for Movie or Tv Series ..."
+    />
+  </div>
+  <div class="col-auto">
+    <button type="submit" class="btn btn-warning form-control p-3">
+      Search
+    </button>
+  </div>
+</form>

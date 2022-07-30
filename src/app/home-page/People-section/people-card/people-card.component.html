@@ -1,0 +1,19 @@
+<div class="people-card-container my-3 p-2 mediaCard">
+  <div>
+    <figure class="w-100">
+      <img class="w-100" [src]="input.profile_path" />
+    </figure>
+    <p class="text-truncate ms-1 text-light fw-bold fs-5">{{ input.name }}</p>
+    <p class="text-truncate text-warning ms-1 fw-light">
+      popularity : {{ input.popularity }}
+    </p>
+
+    <button
+      type="button"
+      class="btn btn-outline-warning mb-2 mx-auto d-block w-100"
+      [routerLink]="['/home/Multi-media/person/details/', input.id]"
+    >
+      Actor Details
+    </button>
+  </div>
+</div>

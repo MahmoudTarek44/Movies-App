@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "likes-sidebar.component.scss"
+    ],
+    "names": [],
+    "file": "likes-sidebar.component.css"
+}

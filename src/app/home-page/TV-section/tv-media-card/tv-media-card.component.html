@@ -1,0 +1,16 @@
+<div class="p-2 mx-2 my-3 tv-div mt-3 mediaCard">
+  <figure class="w-100">
+    <img class="w-100" [src]="input.poster_path" />
+  </figure>
+  <h5 class="card-title text-truncate text-light">
+    {{ input.name }}
+  </h5>
+  <p class="text-warning">Rate : {{ input.vote_average }}</p>
+  <button
+    type="button"
+    class="btn btn-outline-warning mb-2 mx-auto d-block w-100 text-warning"
+    [routerLink]="['/home/Multi-media/tv/details/', input.id]"
+  >
+    TV Details
+  </button>
+</div>

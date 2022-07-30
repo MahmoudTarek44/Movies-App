@@ -1,0 +1,41 @@
+<div
+  [ngStyle]="{ 'background-image': 'url(' + input.backdrop_path + ')' }"
+  class="fav-comp row justfy-content-between m-5 align-items-center"
+>
+  <div class="contents">
+    <div class="row">
+      <h5 class="text-light py-4 col-8">{{ input.title }}</h5>
+      <span class="text-muted col-4 mt-4" #favour>
+        <i
+          type="button"
+          [ngClass]="liked ? 'text-danger' : 'text-white'"
+          class="fa-solid fa-heart fs-5 ms-3 mt-2"
+          (click)="like(input, input.id)"
+        ></i>
+      </span>
+    </div>
+
+    <div class="row align-items-center justfy-content-between px-0">
+      <figure class="col-4">
+        <img [src]="input.poster_path" class="w-100" />
+      </figure>
+      <p class="text-light fw-light col-8 fs-5">
+        {{ input.overview.slice(0, 100) + "..." }}
+      </p>
+    </div>
+    <div class="mx-auto">
+      <button
+        [routerLink]="['/home/Multi-media/movie/details/', input.id]"
+        class="btn btn-warning fav-button text-dark mb-2 d-block mx-auto"
+      >
+        View details
+      </button>
+      <button
+        class="btn btn-danger p-1 mt-4 d-block w-25 d-block mx-auto"
+        (click)="removeFav(input.id)"
+      >
+        Remove
+      </button>
+    </div>
+  </div>
+</div>
